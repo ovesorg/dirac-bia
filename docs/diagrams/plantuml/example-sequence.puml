@@ -1,0 +1,34 @@
+@startuml example-sequence
+!theme plain
+
+title User Authentication Sequence
+
+actor User
+participant "Web App" as Web
+participant "API Server" as API
+database "User DB" as DB
+participant "Auth Service" as Auth
+
+User -> Web: Enter credentials
+activate Web
+
+Web -> API: POST /auth/login
+activate API
+
+API -> DB: Query user
+activate DB
+DB --> API: User data
+deactivate DB
+
+API -> Auth: Validate credentials
+activate Auth
+Auth --> API: Valid token
+deactivate Auth
+
+API --> Web: Return JWT token
+deactivate API
+
+Web --> User: Login success
+deactivate Web
+
+@enduml

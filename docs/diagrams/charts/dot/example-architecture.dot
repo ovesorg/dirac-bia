@@ -1,0 +1,38 @@
+digraph system_architecture {
+    rankdir=TB;
+    node [shape=box, style=rounded, fontname="Arial"];
+    edge [fontname="Arial"];
+    
+    // Define nodes
+    User [label="User", shape=ellipse, fillcolor=lightblue, style=filled];
+    WebApp [label="Web Application\n(Frontend)", fillcolor=lightgreen, style=filled];
+    API [label="API Gateway", fillcolor=lightyellow, style=filled];
+    Auth [label="Authentication\nService", fillcolor=lightcoral, style=filled];
+    DB [label="Database", shape=cylinder, fillcolor=lightgray, style=filled];
+    Cache [label="Cache Layer\n(Redis)", shape=cylinder, fillcolor=orange, style=filled];
+    Queue [label="Message Queue", fillcolor=plum, style=filled];
+    Worker [label="Background\nWorkers", fillcolor=lightgreen, style=filled];
+    
+    // Define connections
+    User -> WebApp [label="HTTPS"];
+    WebApp -> API [label="REST/GraphQL"];
+    API -> Auth [label="Validate Token"];
+    API -> DB [label="Query"];
+    API -> Cache [label="Read/Write"];
+    API -> Queue [label="Enqueue Jobs"];
+    Queue -> Worker [label="Process"];
+    Worker -> DB [label="Update"];
+    
+    // Grouping
+    subgraph cluster_backend {
+        label="Backend Services";
+        style=dashed;
+        API; Auth; Queue; Worker;
+    }
+    
+    subgraph cluster_data {
+        label="Data Layer";
+        style=dashed;
+        DB; Cache;
+    }
+}

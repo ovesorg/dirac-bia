@@ -1,0 +1,17 @@
+@startuml example-c4-context
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Context.puml
+
+LAYOUT_WITH_LEGEND()
+
+title System Context Diagram for Example System
+
+Person(user, "User", "A user of the system")
+System(systemA, "System A", "Main application system")
+System_Ext(systemB, "External System B", "External service provider")
+System_Ext(systemC, "External System C", "Third-party API")
+
+Rel(user, systemA, "Uses", "HTTPS")
+Rel(systemA, systemB, "Sends data to", "REST/JSON")
+Rel(systemA, systemC, "Queries", "GraphQL")
+
+@enduml

@@ -1,0 +1,25 @@
+@startuml example-c4-container
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+
+LAYOUT_WITH_LEGEND()
+
+title Container Diagram for System A
+
+Person(user, "User", "A user of the system")
+
+System_Boundary(systemA, "System A") {
+    Container(webapp, "Web Application", "React", "Delivers static content and single page application")
+    Container(api, "API Application", "Python/FastAPI", "Provides REST API for business logic")
+    ContainerDb(database, "Database", "PostgreSQL", "Stores application data")
+    Container(cache, "Cache", "Redis", "Caches frequently accessed data")
+}
+
+System_Ext(systemB, "External System B", "External service provider")
+
+Rel(user, webapp, "Uses", "HTTPS")
+Rel(webapp, api, "Makes API calls to", "REST/JSON")
+Rel(api, database, "Reads from and writes to", "SQL/TCP")
+Rel(api, cache, "Reads from and writes to", "Redis Protocol")
+Rel(api, systemB, "Sends data to", "REST/JSON")
+
+@enduml

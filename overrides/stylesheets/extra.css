@@ -1,0 +1,427 @@
+/* OVES Access Management - optional 2-column layout */
+/* Add the `abs-layout` class to <body> (for example via extra_javascript) to enable these overrides. */
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+    --md-text-font: "Lato", -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+    --md-code-font: "Roboto Mono", SFMono-Regular, Consolas, Menlo, monospace;
+}
+
+body,
+.md-typeset {
+    font-family: var(--md-text-font);
+}
+
+body :is(h1, h2, h3, h4, h5, h6),
+.md-header__title,
+.md-nav__title,
+.md-footer__title {
+    font-family: "Montserrat", var(--md-text-font);
+}
+
+.md-typeset h1 {
+    font-weight: 700;
+}
+
+.md-typeset h2 {
+    font-weight: 600;
+}
+
+.md-typeset :is(h3, h4, h5, h6) {
+    font-weight: 500;
+}
+
+body.abs-layout .md-header__inner .md-header__title,
+body.abs-layout .md-tabs {
+    display: none !important;
+}
+
+body.abs-layout .md-sidebar--secondary {
+    display: none !important;
+}
+
+body.abs-layout .md-content__inner .md-nav--secondary,
+body.abs-layout [data-md-component="toc"],
+body.abs-layout .md-nav--secondary {
+    display: none !important;
+}
+
+@media screen and (min-width: 60em) {
+    body.abs-layout .md-container {
+        display: flex;
+        max-width: none;
+    }
+    
+    body.abs-layout .md-sidebar--primary {
+        width: 300px;
+        flex-shrink: 0;
+    }
+    
+    body.abs-layout .md-content {
+        flex: 1;
+        max-width: none;
+        margin-left: 20px;
+    }
+    
+    body.abs-layout .md-content__inner {
+        max-width: none;
+        margin: 0;
+    }
+}
+
+body.abs-layout .md-nav--primary .md-nav__title {
+    font-weight: bold;
+    color: var(--md-primary-fg-color);
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+body.abs-layout .md-nav--primary .md-nav__title:hover {
+    color: var(--md-accent-fg-color);
+}
+
+body.abs-layout .md-nav__item {
+    margin: 0.2em 0;
+}
+
+body.abs-layout .md-nav__item--active > .md-nav__link {
+    color: var(--md-primary-fg-color);
+    font-weight: 500;
+}
+
+body.abs-layout nav[data-md-level="0"] > .md-nav__list > .md-nav__item {
+    border-bottom: 1px solid var(--md-default-fg-color--lightest);
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+}
+
+body.abs-layout nav[data-md-level="0"] > .md-nav__list > .md-nav__item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+body.abs-layout .md-nav__link {
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+body.abs-layout .md-nav__link:hover {
+    background-color: var(--md-default-fg-color--lightest);
+}
+
+body.abs-layout .abs-card {
+    border: 1px solid var(--md-default-fg-color--lightest);
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem 0;
+    background-color: var(--md-default-bg-color);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+body.abs-layout .abs-card h3 {
+    margin-top: 0;
+    font-weight: 600;
+}
+
+body.abs-layout .abs-label {
+    display: inline-block;
+    padding: 0.15rem 0.5rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    background-color: rgba(0, 102, 204, 0.12);
+    color: #0066cc;
+}
+
+body.abs-layout .md-typeset table:not([class]) {
+    border: 1px solid var(--md-default-fg-color--lighter);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+body.abs-layout .md-typeset table:not([class]) thead {
+    background-color: var(--md-default-fg-color--lightest);
+}
+
+body.abs-layout .md-typeset table:not([class]) th {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+
+body.abs-layout .md-typeset table:not([class]) :is(th, td) {
+    padding: 0.7rem 0.9rem;
+}
+
+body.abs-layout .md-typeset .admonition {
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+body.abs-layout .md-typeset .admonition-title {
+    font-weight: 600;
+    letter-spacing: 0.03em;
+}
+
+body.abs-layout .md-typeset pre > code {
+    border-radius: 6px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+body.abs-layout .md-typeset code {
+    padding: 0.1rem 0.35rem;
+    border-radius: 4px;
+}
+
+body.abs-layout .abs-quick-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin: 1.5rem 0;
+}
+
+body.abs-layout .abs-quick-actions a {
+    flex: 1 1 180px;
+    text-align: center;
+    padding: 0.8rem 1rem;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--md-primary-fg-color);
+    background-color: rgba(0, 102, 204, 0.08);
+    border: 1px solid rgba(0, 102, 204, 0.2);
+    transition: all 0.2s ease;
+}
+
+body.abs-layout .abs-quick-actions a:hover {
+    background-color: rgba(0, 102, 204, 0.15);
+    border-color: rgba(0, 102, 204, 0.35);
+}
+
+body.abs-layout .md-typeset h2 {
+    border-bottom: 1px solid var(--md-default-fg-color--lighter);
+    padding-bottom: 0.3rem;
+    margin-bottom: 0.8rem;
+}
+
+body.abs-layout .md-typeset h3 {
+    margin-top: 1.5rem;
+}
+
+body.abs-layout .md-typeset > h2:not(:first-child) {
+    margin-top: 2.5rem;
+}
+
+body.abs-layout .md-typeset blockquote {
+    border-left: 4px solid var(--md-primary-fg-color);
+    padding-left: 1rem;
+    background-color: rgba(0, 102, 204, 0.04);
+}
+
+body.abs-layout .md-typeset dl {
+    display: grid;
+    grid-template-columns: minmax(120px, 240px) 1fr;
+    gap: 0.6rem 1rem;
+}
+
+body.abs-layout .md-typeset dt {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+}
+
+body.abs-layout .md-typeset dd {
+    margin: 0;
+}
+
+body.abs-layout .md-typeset ul.columns {
+    columns: 2;
+    column-gap: 2rem;
+}
+
+body.abs-layout .md-typeset ul.columns li {
+    break-inside: avoid;
+    margin-bottom: 0.3rem;
+}
+
+body.abs-layout .md-typeset a.button-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 999px;
+    font-weight: 600;
+    background-color: rgba(0, 102, 204, 0.08);
+    border: 1px solid rgba(0, 102, 204, 0.3);
+    text-decoration: none;
+}
+
+body.abs-layout .md-typeset a.button-link:hover {
+    background-color: rgba(0, 102, 204, 0.15);
+}
+
+body.abs-layout .md-typeset .tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.15rem 0.5rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    background-color: var(--md-default-fg-color--lightest);
+}
+
+@media screen and (max-width: 76.1875em) {
+    body.abs-layout .md-sidebar--primary {
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 60em) {
+    body.abs-layout .md-container {
+        display: block !important;
+    }
+    
+    body.abs-layout .md-sidebar--primary {
+        width: 12.1rem !important;
+    }
+    
+    body.abs-layout .md-content {
+        margin-left: 0 !important;
+        max-width: 100% !important;
+        width: 100%;
+    }
+    
+    body.abs-layout .md-content__inner {
+        padding: 1.2rem 0.8rem !important;
+        margin: 0 auto !important;
+        max-width: 100% !important;
+    }
+}
+
+@media screen and (min-width: 60em) and (max-width: 76.1875em) {
+    body.abs-layout .md-content__inner {
+        padding: 1.2rem 1.6rem;
+    }
+}
+
+body.abs-layout .md-select {
+    position: relative;
+}
+
+body.abs-layout .md-select__inner option[value*="/en/"]::before,
+body.abs-layout .md-select__link[hreflang="en"]::before {
+    content: "🇬🇧 ";
+}
+
+body.abs-layout .md-select__inner option[value*="/zh/"]::before,
+body.abs-layout .md-select__link[hreflang="zh"]::before {
+    content: "🇨🇳 ";
+}
+
+body.abs-layout .md-select__inner option[value*="/fr/"]::before,
+body.abs-layout .md-select__link[hreflang="fr"]::before {
+    content: "🇫🇷 ";
+}
+
+body.abs-layout .md-header__option {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+}
+
+body.abs-layout .md-select__link {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.2rem;
+    transition: background-color 0.2s ease;
+    font-size: 1.2rem;
+}
+
+body.abs-layout .md-select__link:hover {
+    background-color: var(--md-default-fg-color--lightest);
+}
+
+body.abs-layout .md-select__inner {
+    font-size: 1rem;
+    padding: 0.3rem 0.5rem;
+    border-radius: 0.2rem;
+    border: 1px solid var(--md-default-fg-color--lighter);
+    background-color: transparent;
+    color: var(--md-default-fg-color);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+body.abs-layout .md-select__inner:hover {
+    background-color: var(--md-default-fg-color--lightest);
+    border-color: var(--md-accent-fg-color);
+}
+
+body.abs-layout [data-md-component="alternate"] {
+    margin-left: 0.4rem;
+}
+
+body.abs-layout .md-header__option .md-select {
+    font-size: 1.2rem;
+}
+
+body.abs-layout .md-header__button.md-icon[for="__alternate"] {
+    font-size: 1.4rem;
+}
+
+@media screen and (max-width: 60em) {
+    body.abs-layout .md-select__inner {
+        font-size: 0.9rem;
+        padding: 0.2rem 0.4rem;
+    }
+}
+
+/* Global Admonition Styling inspired by Azure docs */
+.md-typeset .admonition {
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.md-typeset .admonition-title {
+    font-weight: 600;
+    letter-spacing: 0.03em;
+}
+
+/* Type-specific color treatments */
+.md-typeset .admonition.note {
+    border-color: #2563eb;
+    background-color: rgba(37, 99, 235, 0.08);
+}
+.md-typeset .admonition.note .admonition-title {
+    color: #2563eb;
+}
+
+.md-typeset .admonition.tip {
+    border-color: #16a34a;
+    background-color: rgba(22, 163, 74, 0.08);
+}
+.md-typeset .admonition.tip .admonition-title {
+    color: #16a34a;
+}
+
+.md-typeset .admonition.warning {
+    border-color: #b45309;
+    background-color: rgba(180, 83, 9, 0.12);
+}
+.md-typeset .admonition.warning .admonition-title {
+    color: #b45309;
+}
+
+.md-typeset .admonition.important {
+    border-color: #dc2626;
+    background-color: rgba(220, 38, 38, 0.08);
+}
+.md-typeset .admonition.important .admonition-title {
+    color: #dc2626;
+}
