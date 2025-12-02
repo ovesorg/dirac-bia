@@ -44,3 +44,7 @@ markdown_extensions:
 
 nav:
   - Home: index.md
+  - Metrics Dashboards:
+    - Overview: metrics-dashboards/index.md
+    - Backend: metrics-dashboards/backend.md
+    - Frontend: metrics-dashboards/frontend.md

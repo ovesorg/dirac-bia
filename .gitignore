@@ -47,3 +47,6 @@ plantuml.jar
 # Environment
 .env
 .env.local
+
+# History
+.history/
