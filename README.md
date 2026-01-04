@@ -77,3 +77,7 @@ mkdocs-oves-render
 ## Support
 
 For issues or questions, please open an issue in this repository.
+
+---
+
+**📚 For detailed documentation, visit:** [docs.omnivoltaic.com/dirac-bia](https://docs.omnivoltaic.com/dirac-bia)

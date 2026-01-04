@@ -7,44 +7,56 @@ docs_dir: docs
 site_dir: site
 
 extra_javascript:
-  - https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js
-  - overrides/javascripts/chartjs-init.js
+- https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js
+- overrides/javascripts/chartjs-init.js
 
 theme:
   name: material
   custom_dir: overrides
   palette:
-    - scheme: default
-      primary: blue
-      accent: blue
-      toggle:
-        icon: material/brightness-7
-        name: Switch to dark mode
-    - scheme: slate
-      primary: blue
-      accent: blue
-      toggle:
-        icon: material/brightness-4
-        name: Switch to light mode
+  - scheme: default
+    primary: blue
+    accent: blue
+    toggle:
+      icon: material/brightness-7
+      name: Switch to dark mode
+  - scheme: slate
+    primary: blue
+    accent: blue
+    toggle:
+      icon: material/brightness-4
+      name: Switch to light mode
   features:
-    - navigation.top
-    - search.highlight
-    - content.code.copy
-    - toc.integrate
-
+  - navigation.top
+  - navigation.tracking
+  - navigation.instant
+  - navigation.instant.progress
+  - search.highlight
+  - content.code.copy
+  - toc.integrate
 markdown_extensions:
-  - admonition
-  - pymdownx.details
-  - pymdownx.superfences
-  - pymdownx.tabbed:
-      alternate_style: true
-  - tables
-  - toc:
-      permalink: true
+- admonition
+- pymdownx.details
+- pymdownx.superfences
+- pymdownx.tabbed:
+    alternate_style: true
+- tables
+- toc:
+    permalink: true
 
 nav:
-  - Home: index.md
-  - Metrics Dashboards:
-    - Overview: metrics-dashboards/index.md
-    - Backend: metrics-dashboards/backend.md
-    - Frontend: metrics-dashboards/frontend.md
+- Home: index.md
+- Metrics Dashboards:
+  - Overview: metrics-dashboards/index.md
+  - Backend: metrics-dashboards/backend.md
+  - Frontend: metrics-dashboards/frontend.md
+extra:
+  generator: false
+  oves_doc_version: 1.0.0
+  oves_last_editor: Huashan Wang
+  oves_revision_summary: dirac-bia documentation
+  oves_revision_date: '2026-01-04'
+repo_name: ovesorg/dirac-bia
+repo_url: https://github.com/ovesorg/dirac-bia
+extra_css:
+- stylesheets/extra.css
