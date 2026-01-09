@@ -1,0 +1,40 @@
+{
+  "migration_date": "2025-11-22",
+  "package_version": "0.1.2",
+  "changes": [
+    {
+      "action": "removed",
+      "path": "scripts/plantuml.jar"
+    },
+    {
+      "action": "copied",
+      "path": "overrides/partials/edition.html"
+    },
+    {
+      "action": "copied",
+      "path": "overrides/partials/copyright.html"
+    },
+    {
+      "action": "copied",
+      "path": "docs/stylesheets/extra.css"
+    },
+    {
+      "action": "created",
+      "path": "hooks/update_date.py"
+    },
+    {
+      "action": "updated",
+      "path": "mkdocs.yml",
+      "details": [
+        "Added hooks configuration for auto-date update"
+      ]
+    }
+  ],
+  "next_steps": [
+    "pip install -r requirements.txt",
+    "mkdocs serve (test locally)",
+    "Use: mkdocs-oves-krr (instead of python scripts/krr.py)",
+    "Use: mkdocs-oves-render (for PlantUML diagrams)",
+    "Update CI/CD workflows to install mkdocs-oves-template"
+  ]
+}
