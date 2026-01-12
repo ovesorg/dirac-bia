@@ -842,4 +842,3 @@ curl http://prometheus:9090/api/v1/status/tsdb
 - [Monitoring Overview](./index.md)
 - [Logs Guide](./logs.md)
 - [Alerting Configuration](./index.md#alerting)
-- [Grafana Dashboards](https://grafana.omnivoltaic.com)
