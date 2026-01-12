@@ -50,6 +50,10 @@ nav:
   - Overview: metrics-dashboards/index.md
   - Backend: metrics-dashboards/backend.md
   - Frontend: metrics-dashboards/frontend.md
+- Monitoring Areas:
+  - Grafana: monitoring-areas/grafana.md
+  - Argo CD: monitoring-areas/argocd.md
+  
 extra:
   generator: false
   oves_doc_version: 1.0.0
