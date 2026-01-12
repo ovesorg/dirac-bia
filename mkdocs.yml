@@ -45,16 +45,19 @@ markdown_extensions:
     permalink: true
 
 nav:
-- Home: index.md
-- Metrics Dashboards:
-  - Overview: metrics-dashboards/index.md
-  - Backend: metrics-dashboards/backend.md
-  - Frontend: metrics-dashboards/frontend.md
-- Monitoring Areas:
-  -Monitoring and Observability: monitoring-areas/index.md
-  -Logs: monitoring-areas/logs.md
-  -Metrics: monitoring-areas/metrics.md
-  
+  - Home: index.md
+
+  - Metrics Dashboards:
+      - Overview: metrics-dashboards/index.md
+      - Backend: metrics-dashboards/backend.md
+      - Frontend: metrics-dashboards/frontend.md
+
+  - Monitoring Areas:
+      - Monitoring and Observability: monitoring-areas/index.md
+      - Logs: monitoring-areas/logs.md
+      - Metrics: monitoring-areas/metrics.md
+
+
 
 extra:
   generator: false
