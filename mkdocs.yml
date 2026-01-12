@@ -51,7 +51,10 @@ nav:
   - Backend: metrics-dashboards/backend.md
   - Frontend: metrics-dashboards/frontend.md
 - Monitoring Areas:
-  -Monitoring and Observability: monitoring-areas/monitoring.md
+  -Monitoring and Observability: monitoring-areas/index.md
+  -Logs: monitoring-areas/logs.md
+  -Metrics: monitoring-areas/metrics.md
+  
 
 extra:
   generator: false

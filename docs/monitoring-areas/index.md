@@ -605,9 +605,4 @@ storage: 10GB EBS volume
 4. Check AlertManager routing rules
 5. Verify webhook/notification channel configuration
 
-## Related Documentation
-
-- [Metrics Guide](./metrics.md)
-- [Logs Guide](./logs.md)
-- [CI/CD Pipeline](../cicd/index.md)
-- [Infrastructure Overview](../infrastructure/index.md)
+)
