@@ -45,40 +45,20 @@ markdown_extensions:
     permalink: true
 
 nav:
-- Home: index.md
-- 1. CRM Intelligence:
-  - Overview: 1-crm/index.md
-  - Sales Analytics: 1-crm/sales.md
-  - Client Insights: 1-crm/clients.md
-  - Service Issues: 1-crm/service-issues.md
-  - Customer Complaints: 1-crm/complaints.md
-- 2. ARM Intelligence:
-  - Overview: 2-arm/index.md
-  - Asset Location: 2-arm/location.md
-  - Asset Status: 2-arm/status.md
-  - Asset Behavior: 2-arm/behavior.md
-- 3. Supply Chain Intelligence:
-  - Overview: 3-supply-chain/index.md
-  - Logistics: 3-supply-chain/logistics.md
-  - Inventory: 3-supply-chain/inventory.md
-  - Fulfillment: 3-supply-chain/fulfillment.md
-- 4. IT Systems Intelligence:
-  - Overview: 4-it-systems/index.md
-  - Server Health: 4-it-systems/server-health.md
-  - API Performance: 4-it-systems/api-performance.md
-  - Traffic Analytics: 4-it-systems/traffic.md
-  - Service Uptime: 4-it-systems/uptime.md
-- 5. Teams Intelligence:
-  - Overview: 5-teams/index.md
-  - Communications: 5-teams/communications.md
-  - Documentation Analytics: 5-teams/docs-analytics.md
-  - Productivity Insights: 5-teams/productivity.md
-- 6. KPI Intelligence:
-  - Overview: 6-kpi/index.md
-  - Financial KPIs: 6-kpi/financial.md
-  - Commercial KPIs: 6-kpi/commercial.md
-  - Quality KPIs: 6-kpi/quality.md
-  - Growth Metrics: 6-kpi/growth.md
+  - Home: index.md
+
+  - Metrics Dashboards:
+      - Overview: metrics-dashboards/index.md
+      - Backend: metrics-dashboards/backend.md
+      - Frontend: metrics-dashboards/frontend.md
+
+  - Monitoring Areas:
+      - Monitoring and Observability: monitoring-areas/index.md
+      - Logs: monitoring-areas/logs.md
+      - Metrics: monitoring-areas/metrics.md
+
+
+
 extra:
   generator: false
   oves_doc_version: 1.0.0
