@@ -10,6 +10,7 @@ extra_javascript:
 - https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js
 - overrides/javascripts/chartjs-init.js
 
+- javascripts/global-doc-home.js
 theme:
   name: material
   custom_dir: overrides
@@ -45,17 +46,17 @@ markdown_extensions:
     permalink: true
 
 nav:
-  - Home: index.md
+- Home: index.md
 
-  - Metrics Dashboards:
-      - Overview: metrics-dashboards/index.md
-      - Backend: metrics-dashboards/backend.md
-      - Frontend: metrics-dashboards/frontend.md
+- Metrics Dashboards:
+  - Overview: metrics-dashboards/index.md
+  - Backend: metrics-dashboards/backend.md
+  - Frontend: metrics-dashboards/frontend.md
 
-  - Monitoring Areas:
-      - Monitoring and Observability: monitoring-areas/index.md
-      - Logs: monitoring-areas/logs.md
-      - Metrics: monitoring-areas/metrics.md
+- Monitoring Areas:
+  - Monitoring and Observability: monitoring-areas/index.md
+  - Logs: monitoring-areas/logs.md
+  - Metrics: monitoring-areas/metrics.md
 
 
 
@@ -65,9 +66,14 @@ extra:
   oves_last_editor: Huashan Wang
   oves_revision_summary: dirac-bia documentation
   oves_revision_date: '2026-01-04'
+  oves_hub_integration:
+    enabled: true
+    cloud_home_url: https://docs.omnivoltaic.com/internal/consolidated-docs/
+    local_home_url: http://127.0.0.1:8017/
 repo_name: ovesorg/dirac-bia
 repo_url: https://github.com/ovesorg/dirac-bia
 extra_css:
 - stylesheets/extra.css
 hooks:
 - hooks/update_date.py
+- hooks/build_semantic_registry.py

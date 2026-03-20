@@ -1,0 +1,86 @@
+{#-
+  OVES header override:
+  - stays close to stock Material header behavior
+  - adds "Doc Hub" text next to the logo
+  - reorders right-side controls to: search, source, language, palette
+-#}
+{% set class = "md-header" %}
+{% if "navigation.tabs.sticky" in features %}
+  {% set class = class ~ " md-header--shadow md-header--lifted" %}
+{% elif "navigation.tabs" not in features %}
+  {% set class = class ~ " md-header--shadow" %}
+{% endif %}
+{% set hub = config.extra.oves_hub_integration | d({}, true) %}
+{% set hub_enabled = hub.enabled | d(false, true) %}
+{% set hub_cloud_home = hub.cloud_home_url | d("", true) %}
+{% set hub_local_home = hub.local_home_url | d("", true) %}
+<header class="{{ class }}" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="{{ lang.t('header') }}">
+    <a
+      href="{{ (hub_cloud_home if hub_enabled else config.extra.homepage | d(nav.homepage.url, true)) | url }}"
+      title="{{ 'Back to Document Hub' if hub_enabled else config.site_name }}"
+      class="md-header__button md-logo"
+      aria-label="{{ 'Back to Document Hub' if hub_enabled else config.site_name }}"
+      data-md-component="logo"
+      {% if hub_enabled %}
+      data-oves-hub-home-link="1"
+      data-oves-hub-cloud-home="{{ hub_cloud_home }}"
+      data-oves-hub-local-home="{{ hub_local_home }}"
+      {% endif %}
+    >
+      {% include "partials/logo.html" %}
+      {% if hub_enabled %}
+      <span class="oves-doc-hub-label">Doc Hub</span>
+      {% endif %}
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      {% set icon = config.theme.icon.menu or "material/menu" %}
+      {% include ".icons/" ~ icon ~ ".svg" %}
+    </label>
+    {% if "material/search" in config.plugins %}
+      {% set search = config.plugins["material/search"] | attr("config") %}
+      {% if search.enabled %}
+        <label class="md-header__button md-icon" for="__search">
+          {% set icon = config.theme.icon.search or "material/magnify" %}
+          {% include ".icons/" ~ icon ~ ".svg" %}
+        </label>
+        {% include "partials/search.html" %}
+      {% endif %}
+    {% endif %}
+    {% if hub_enabled %}
+    <a
+      href="{{ (hub_cloud_home.rstrip('/') ~ '/global-search/') | url }}"
+      class="md-header__button md-icon oves-global-search-link"
+      title="Search all docs"
+      aria-label="Search all docs"
+      data-oves-hub-cloud-home="{{ hub_cloud_home }}"
+      data-oves-hub-local-home="{{ hub_local_home }}"
+    >
+      {% set icon = config.theme.icon.search or "material/magnify" %}
+      {% include ".icons/" ~ icon ~ ".svg" %}
+      <span class="oves-global-search-label">Global</span>
+    </a>
+    {% endif %}
+    {% if config.repo_url %}
+      <div class="md-header__source">
+        {% include "partials/source.html" %}
+      </div>
+    {% endif %}
+    {% if config.extra.alternate %}
+      {% include "partials/alternate.html" %}
+    {% endif %}
+    {% if config.theme.palette %}
+      {% if not config.theme.palette is mapping %}
+        {% include "partials/palette.html" %}
+      {% endif %}
+    {% endif %}
+    {% if not config.theme.palette is mapping %}
+      {% include "partials/javascripts/palette.html" %}
+    {% endif %}
+  </nav>
+  {% if "navigation.tabs.sticky" in features %}
+    {% if "navigation.tabs" in features %}
+      {% include "partials/tabs.html" %}
+    {% endif %}
+  {% endif %}
+</header>

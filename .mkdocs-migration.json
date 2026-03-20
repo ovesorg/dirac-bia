@@ -1,6 +1,6 @@
 {
   "migration_date": "2025-11-22",
-  "package_version": "0.1.2",
+  "package_version": "0.1.3",
   "changes": [
     {
       "action": "removed",
@@ -16,17 +16,35 @@
     },
     {
       "action": "copied",
+      "path": "overrides/partials/header.html"
+    },
+    {
+      "action": "copied",
       "path": "docs/stylesheets/extra.css"
+    },
+    {
+      "action": "copied",
+      "path": "docs/javascripts/global-doc-home.js"
     },
     {
       "action": "created",
       "path": "hooks/update_date.py"
     },
     {
+      "action": "created",
+      "path": "hooks/build_semantic_registry.py"
+    },
+    {
+      "action": "created",
+      "path": ".docs-template-info.json"
+    },
+    {
       "action": "updated",
       "path": "mkdocs.yml",
       "details": [
-        "Added hooks configuration for auto-date update"
+        "Added global-doc-home.js script reference",
+        "Added oves_hub_integration configuration",
+        "Added build_semantic_registry.py to hooks"
       ]
     }
   ],

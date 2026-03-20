@@ -375,6 +375,43 @@ body.abs-layout .md-header__button.md-icon[for="__alternate"] {
     font-size: 1.4rem;
 }
 
+.md-header__button.md-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.oves-doc-hub-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.oves-global-search-link {
+    display: inline-flex !important;
+    align-items: center;
+    gap: 0.3rem;
+    text-decoration: none;
+}
+
+.oves-global-search-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+@media screen and (max-width: 60em) {
+    .oves-doc-hub-label {
+        display: none;
+    }
+
+    .oves-global-search-label {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 60em) {
     body.abs-layout .md-select__inner {
         font-size: 0.9rem;
