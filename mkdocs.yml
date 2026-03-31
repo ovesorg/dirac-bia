@@ -2,14 +2,11 @@ site_name: DIRAC - Business Intelligence Agents
 site_description: Documentation for DIRAC Business Intelligence Agents
 site_author: Your Organization
 copyright: Copyright &copy; 2026 Omnivoltaic Energy Solutions
-
 docs_dir: docs
 site_dir: site
-
 extra_javascript:
 - https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js
 - overrides/javascripts/chartjs-init.js
-
 - javascripts/global-doc-home.js
 theme:
   name: material
@@ -44,22 +41,16 @@ markdown_extensions:
 - tables
 - toc:
     permalink: true
-
 nav:
 - Home: index.md
-
-- Metrics Dashboards:
-  - Overview: metrics-dashboards/index.md
-  - Backend: metrics-dashboards/backend.md
-  - Frontend: metrics-dashboards/frontend.md
-
+- Dashboards:
+  - InfluxDB Dashboards: influxdb-dashboards/index.md
+- IT Systems:
+  - Overview: 4-it-systems/index.md
 - Monitoring Areas:
   - Monitoring and Observability: monitoring-areas/index.md
   - Logs: monitoring-areas/logs.md
   - Metrics: monitoring-areas/metrics.md
-
-
-
 extra:
   generator: false
   oves_doc_version: 1.0.0
@@ -77,3 +68,11 @@ extra_css:
 hooks:
 - hooks/update_date.py
 - hooks/build_semantic_registry.py
+plugins:
+- search
+exclude_docs: |
+  en/
+  fr/
+  zh/
+  *.fr.md
+  *.zh.md

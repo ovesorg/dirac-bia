@@ -59,6 +59,13 @@ The OVES monitoring stack provides complete observability across all infrastruct
 └─────────────────────────────────────────────────────────────────────┘
 ```
 
+## Alerting
+
+Alerting in this monitoring stack is handled through AlertManager plus
+availability checks from tools such as Uptime Kuma and Checkly. Use this page
+as the anchor overview for alert routing, notification channels, and escalation
+expectations referenced by the logs and metrics guides.
+
 ## Monitoring Stack Components
 
 ### 1. Metrics Collection (Prometheus)

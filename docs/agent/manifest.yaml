@@ -1,0 +1,52 @@
+schema_version: "1.0"
+kind: "repo_manifest"
+
+repo_id: "dirac-bia"
+repo_class: "dirac"
+lifecycle: "active"
+owner: "repo-owner-tbd"
+framework_repo: "dirac-framework"
+
+authority_order:
+  - repo_owner_rules
+  - component_spec
+  - repo_spec
+  - framework_guidance
+
+entrypoints:
+  - "docs/agent/start-here.md"
+  - "docs/context/capabilities.md"
+  - "docs/context/workflows.md"
+  - "docs/context/contracts.md"
+  - "README.md"
+  - "docs/index.md"
+  - "mkdocs.yml"
+
+resource_roots:
+  specs: "docs/context"
+  governance: "docs/context"
+  experience: "docs"
+  architecture: "docs"
+
+components:
+  - id: "monitoring-observability"
+    labels:
+      - "monitoring"
+      - "logging"
+      - "metrics"
+      - "alerting"
+    paths:
+      architecture: "docs/monitoring-areas"
+      specs: "docs/context"
+  - id: "dashboards"
+    labels:
+      - "dashboards"
+      - "influxdb"
+      - "visualization"
+    paths:
+      architecture: "docs/influxdb-dashboards"
+      specs: "docs/context"
+
+notes:
+  - "This repo is a DIRAC documentation site for monitoring, metrics, logging, and related BI/observability guidance."
+  - "Repo-local docs describe monitoring domains; framework guidance lives in dirac-framework when broader cross-repo patterns matter."

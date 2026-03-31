@@ -3,10 +3,12 @@
   "template_version": "0.1.3",
   "repo_name": "dirac-bia",
   "marker_version": 1,
-  "last_template_sync": "2026-03-19",
-  "site_name": "DIRAC - Business Intelligence Agents",
-  "template_state": "migrated",
+  "last_template_sync": "2026-03-23",
+  "site_name": "dirac-bia",
+  "template_state": "normalized",
   "quality_marker": "template-managed",
   "global_search_bridge_version": 1,
-  "hub_integration_enabled": true
+  "hub_integration_enabled": true,
+  "repo_independent_build": true,
+  "language_mode": "root-english-only"
 }
