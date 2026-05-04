@@ -20,6 +20,11 @@ on monitoring, logging, metrics, dashboards, and IT systems visibility.
 - source of truth: `docs/4-it-systems/index.md`
 - purpose: describe the infrastructure and systems-intelligence area covered by this repo
 
+### Repo-Local ADRs
+
+- source of truth: `docs/adr/index.md`, `docs/adr/dirac-bia-migration-proposal.md`
+- purpose: capture repo-scoped BIA architecture proposals and decisions without promoting them to broader DIRAC framework guidance
+
 ### Repo Workflows
 
 - source of truth: `docs/context/workflows.md`

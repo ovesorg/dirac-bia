@@ -18,6 +18,7 @@ entrypoints:
   - "docs/context/capabilities.md"
   - "docs/context/workflows.md"
   - "docs/context/contracts.md"
+  - "docs/adr/index.md"
   - "README.md"
   - "docs/index.md"
   - "mkdocs.yml"
@@ -49,4 +50,5 @@ components:
 
 notes:
   - "This repo is a DIRAC documentation site for monitoring, metrics, logging, and related BI/observability guidance."
+  - "Repo-local architecture proposals and decisions may be recorded under docs/adr when they are scoped to dirac-bia."
   - "Repo-local docs describe monitoring domains; framework guidance lives in dirac-framework when broader cross-repo patterns matter."

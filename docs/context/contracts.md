@@ -14,6 +14,7 @@
 ## Scope Contract
 
 - use this repo for BIA-specific documentation on dashboards, monitoring areas, and IT systems intelligence
+- use `docs/adr/` for repo-local BIA architecture proposals and decisions that should remain durable in this repo
 - use `dirac-framework` for broader shared DIRAC architectural guidance when the topic extends beyond `dirac-bia`
 - do not treat placeholder or empty topic folders as authoritative until they contain real docs
 

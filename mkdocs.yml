@@ -43,6 +43,9 @@ markdown_extensions:
     permalink: true
 nav:
 - Home: index.md
+- ADRs:
+  - Overview: adr/index.md
+  - Dirac-BIA Migration Proposal: adr/dirac-bia-migration-proposal.md
 - Dashboards:
   - InfluxDB Dashboards: influxdb-dashboards/index.md
 - IT Systems:

@@ -4,8 +4,9 @@
 
 1. Edit the relevant Markdown sources under `docs/`
 2. Update `mkdocs.yml` when navigation or page structure changes
-3. Validate with `python -m mkdocs build --strict -f D:\github\dirac-bia\mkdocs.yml`
-4. Review whether changes should also update repo MCP context docs
+3. Update `docs/adr/` when the change introduces or revises a repo-local architecture proposal or decision
+4. Validate with `python -m mkdocs build --strict -f D:\github\dirac-bia\mkdocs.yml`
+5. Review whether changes should also update repo MCP context docs
 
 ## Provision Or Refresh Repo MCP Docs
 

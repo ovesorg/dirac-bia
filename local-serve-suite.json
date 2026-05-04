@@ -1,0 +1,9 @@
+[
+  {
+    "name": "dirac-bia",
+    "port": 8017,
+    "url": "http://127.0.0.1:8017/",
+    "command": "python -m mkdocs serve -f D:\\github\\dirac-bia\\mkdocs.yml -a 127.0.0.1:8017",
+    "workdir": "D:\\github\\dirac-bia"
+  }
+]
